@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Змейка</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-labelledby="game-title">
+      <section class="hero">
+        <p class="eyebrow">Классическая аркада</p>
+        <h1 id="game-title">Змейка</h1>
+        <p class="subtitle">
+          Собирайте яблоки, растите и не врезайтесь в стены или собственный хвост.
+        </p>
+      </section>
+
+      <section class="scoreboard" aria-label="Счёт игры">
+        <div>
+          <span class="label">Счёт</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">Рекорд</span>
+          <strong id="best-score">0</strong>
+        </div>
+      </section>
+
+      <section class="board-card">
+        <canvas id="game" width="480" height="480" aria-label="Поле игры Змейка"></canvas>
+        <div id="message" class="message" role="status" aria-live="polite">
+          Нажмите «Старт» или пробел, чтобы начать
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Управление игрой">
+        <button id="start-button" type="button">Старт</button>
+        <button id="pause-button" type="button">Пауза</button>
+        <button id="restart-button" type="button">Заново</button>
+      </section>
+
+      <section class="touch-controls" aria-label="Сенсорное управление">
+        <button data-direction="up" aria-label="Вверх">↑</button>
+        <button data-direction="left" aria-label="Влево">←</button>
+        <button data-direction="right" aria-label="Вправо">→</button>
+        <button data-direction="down" aria-label="Вниз">↓</button>
+      </section>
+
+      <p class="hint">Управление: стрелки, WASD или кнопки на экране. Пробел — пауза/старт.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
