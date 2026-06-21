@@ -1,4 +1,4 @@
-name: Publish Snake Page
+name: Deploy Snake Game to GitHub Pages
 
 on:
   push:
